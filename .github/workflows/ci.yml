@@ -1,0 +1,105 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  GOTOOLCHAIN: local
+  GOWORK: "off"
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  test:
+    name: Go ${{ matrix.go }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        go: ["1.25.0", "1.26.x", "stable"]
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Set up Go
+        uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version: ${{ matrix.go }}
+          check-latest: true
+          cache-dependency-path: go.mod
+      - name: Show Go version
+        run: go version
+      - name: Check that there are no external modules
+        run: |
+          external_modules=$(go list -m -f '{{if not .Main}}{{.Path}}{{end}}' all)
+          if [[ -n "$external_modules" ]]; then
+            printf 'Unexpected external modules:\n%s\n' "$external_modules"
+            exit 1
+          fi
+      - name: Build
+        run: go build ./...
+      - name: Vet
+        run: go vet ./...
+      - name: Test with the race detector
+        env:
+          CGO_ENABLED: "1"
+        run: go test -race -count=1 -timeout=2m ./...
+
+  quality:
+    name: Code quality
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Set up Go
+        uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version: "1.27.3"
+          cache-dependency-path: go.mod
+      - name: Show Go version
+        run: go version
+      - name: Check formatting
+        run: |
+          unformatted=$(gofmt -l .)
+          if [[ -n "$unformatted" ]]; then
+            printf 'Files need gofmt:\n%s\n' "$unformatted"
+            exit 1
+          fi
+      - name: Check module files
+        run: go mod tidy -diff
+      - name: Install golangci-lint
+        uses: golangci/golangci-lint-action@ba0d7d2ec06a0ea1cb5fa41b2e4a3ab91d21278a # v9.3.0
+        with:
+          version: v2.15.0
+          install-mode: binary
+          install-only: true
+          skip-cache: true
+      - name: Validate linter configuration
+        run: |
+          golangci-lint version
+          golangci-lint config verify
+      - name: Lint
+        run: golangci-lint run --timeout=2m ./...
+      - name: Install govulncheck
+        run: go install golang.org/x/vuln/cmd/govulncheck@v1.9.0
+      - name: Check for vulnerabilities
+        run: |
+          govulncheck -version
+          govulncheck ./...

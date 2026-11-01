@@ -1,0 +1,18 @@
+# Local build and test artifacts.
+/bin/
+*.exe
+*.exe~
+*.test
+*.test.exe
+/coverage.out
+/coverage.html
+/coverage/
+
+# Local editor and operating system files.
+/.idea/
+/.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
