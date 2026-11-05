@@ -37,6 +37,12 @@ gofmt -w .
 
 When checking compatibility with an installed Go 1.25.0 toolchain, set `GOTOOLCHAIN=local` so Go does not switch to the recommended development toolchain. CI also sets `GOWORK=off` to check this module independently.
 
+## Contributing
+
+Create a branch from the latest `main` and keep each change focused. Run the relevant development checks above, then open a pull request into `main` describing the change and how it was checked.
+
+Review the diff, address feedback, and wait for CI to pass before merging. Push follow-up fixes to the same branch so the pull request stays up to date.
+
 ## Development tools
 
 Use Go 1.27.3 and these pinned tool versions:
