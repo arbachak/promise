@@ -104,6 +104,30 @@
       "local_path": ".agents/skills/requesting-code-review/LICENSE.txt",
       "url": "https://raw.githubusercontent.com/obra/superpowers/22f0b463e7a5e579904dd6211a520321035526f7/LICENSE",
       "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400"
+    },
+    {
+      "repository": "obra/superpowers",
+      "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "source_path": "skills/test-driven-development/SKILL.md",
+      "url": "https://raw.githubusercontent.com/obra/superpowers/22f0b463e7a5e579904dd6211a520321035526f7/skills/test-driven-development/SKILL.md",
+      "sha256": "64b03fce4aee5a97a93160cea8111f3ba13a17b7c001db4bd5836d67fd10705d",
+      "local_path": ".agents/skills/test-driven-development/SKILL.md"
+    },
+    {
+      "repository": "obra/superpowers",
+      "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "source_path": "skills/test-driven-development/writing-good-tests.md",
+      "url": "https://raw.githubusercontent.com/obra/superpowers/22f0b463e7a5e579904dd6211a520321035526f7/skills/test-driven-development/writing-good-tests.md",
+      "sha256": "51471c853306ff92ca8bb41dcaea05f31c0e46b03651f8f3c99754b7172f4ae1",
+      "local_path": ".agents/skills/test-driven-development/writing-good-tests.md"
+    },
+    {
+      "repository": "obra/superpowers",
+      "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "source_path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/obra/superpowers/22f0b463e7a5e579904dd6211a520321035526f7/LICENSE",
+      "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+      "local_path": ".agents/skills/test-driven-development/LICENSE.txt"
     }
   ]
 }
