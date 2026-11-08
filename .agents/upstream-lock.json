@@ -128,6 +128,22 @@
       "url": "https://raw.githubusercontent.com/obra/superpowers/22f0b463e7a5e579904dd6211a520321035526f7/LICENSE",
       "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
       "local_path": ".agents/skills/test-driven-development/LICENSE.txt"
+    },
+    {
+      "repository": "conventional-branch/conventional-branch",
+      "revision": "a02c2c9ce172317e677289c6b42dfba3eada14c7",
+      "source_path": "skills/conventional-branch/SKILL.md",
+      "url": "https://raw.githubusercontent.com/conventional-branch/conventional-branch/a02c2c9ce172317e677289c6b42dfba3eada14c7/skills/conventional-branch/SKILL.md",
+      "sha256": "ebe754e4000f240b452afc9019edb4126d9a01427f01868013b54afaf5583d44",
+      "local_path": ".agents/skills/conventional-branch/SKILL.md"
+    },
+    {
+      "repository": "conventional-branch/conventional-branch",
+      "revision": "a02c2c9ce172317e677289c6b42dfba3eada14c7",
+      "source_path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/conventional-branch/conventional-branch/a02c2c9ce172317e677289c6b42dfba3eada14c7/LICENSE",
+      "sha256": "f5b745ef98087f531e719ee8ca6a96809444573ecc7173c6fa68eaad39b3cc3f",
+      "local_path": ".agents/skills/conventional-branch/LICENSE.txt"
     }
   ]
 }

@@ -16,6 +16,8 @@
 
 ## Local skills
 
+- For branch naming and creation, follow [conventional-branch](.agents/skills/conventional-branch/SKILL.md).
+- Use AI-agent branch prefixes only when explicitly requested by the user; otherwise use a purpose-based prefix. This overrides the skill's agent-prefix recommendation.
 - For the TDD implementation phase, the coordinating agent dispatches the registered [tdd-implementer profile](.codex/agents/tdd-implementer.toml) with `fork_turns="none"`, without model or reasoning-effort overrides, supplying the absolute repo_root, task scope, assigned files, requirements, and acceptance checks. When already running as tdd-implementer, execute the assignment directly without delegating again. If the host cannot select the registered profile, report that limitation instead of silently substituting a generic agent or manual model settings.
 - For authorized Go feature work, bug fixes, and observable behavior changes, follow [test-driven-development](.agents/skills/test-driven-development/SKILL.md) and read its [writing-good-tests.md](.agents/skills/test-driven-development/writing-good-tests.md) reference before writing or changing tests. Use the project's Go commands, version floor, and dependency constraints. Mechanical documentation/configuration changes do not require artificial behavioral tests.
 - The TDD implementation phase owns only the assigned code, tests, necessary refactoring, and local verification. Preserve pre-existing user changes. Finish that phase with uncommitted edits and a report of changed paths, observed RED/GREEN evidence, verification results, and limitations; do not stage, commit, switch branches, push, open a PR, or dispatch a reviewer as part of this phase.
