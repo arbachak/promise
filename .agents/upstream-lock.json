@@ -80,6 +80,30 @@
       "url": "https://raw.githubusercontent.com/EveryInc/compound-engineering-plugin/2e41b4490a37f53db0beb6d4904618da9af2f559/LICENSE",
       "sha256": "61d89de7646effdaba2d0a4ab7bd0eba60b4094b83efe5bc73c7940e43e93fc6",
       "local_path": ".agents/skills/ce-explain/LICENSE.txt"
+    },
+    {
+      "repository": "obra/superpowers",
+      "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "source_path": "skills/requesting-code-review/SKILL.md",
+      "local_path": ".agents/skills/requesting-code-review/SKILL.md",
+      "url": "https://raw.githubusercontent.com/obra/superpowers/22f0b463e7a5e579904dd6211a520321035526f7/skills/requesting-code-review/SKILL.md",
+      "sha256": "2180e14a448e9410bec88e6646a2d1f0ce7fdd58de27388c1e052e929679d2bc"
+    },
+    {
+      "repository": "obra/superpowers",
+      "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "source_path": "skills/requesting-code-review/code-reviewer.md",
+      "local_path": ".agents/skills/requesting-code-review/code-reviewer.md",
+      "url": "https://raw.githubusercontent.com/obra/superpowers/22f0b463e7a5e579904dd6211a520321035526f7/skills/requesting-code-review/code-reviewer.md",
+      "sha256": "82e370be6b3447523816286195571e4216ba56ba1ad6ad0e87862294c4c78dcb"
+    },
+    {
+      "repository": "obra/superpowers",
+      "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "source_path": "LICENSE",
+      "local_path": ".agents/skills/requesting-code-review/LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/obra/superpowers/22f0b463e7a5e579904dd6211a520321035526f7/LICENSE",
+      "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400"
     }
   ]
 }
