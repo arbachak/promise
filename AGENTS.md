@@ -17,6 +17,7 @@
 ## Local skills
 
 - When coordinating code review, including before a pull request is ready to merge, read [requesting-code-review](.agents/skills/requesting-code-review/SKILL.md) and follow its workflow. Give the reviewer the requirements and the complete change range.
+- For that workflow, use the [code-reviewer profile](.codex/agents/code-reviewer.toml) in place of the upstream generic subagent. Keep the upstream reviewer prompt as the source of review criteria; report when the host cannot select the registered profile.
 - For explanations of code, changes, concepts, or a period of work, read [ce-explain](.agents/skills/ce-explain/SKILL.md) and the references it requires. Follow its procedure for the behavior-trace and work-recap helpers when needed.
 - Keep upstream skill files and their license unchanged. Record their source revision and checksums in [.agents/upstream-lock.json](.agents/upstream-lock.json).
 - Explaining a subject does not authorize fixes or external publication. Deliver artifacts only to the destination authorized for the task.
