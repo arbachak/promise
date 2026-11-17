@@ -8,7 +8,7 @@ Requires Go 1.25 or later. No external Go module dependencies.
 
 ## Development
 
-Use the development toolchain specified in [go.mod](go.mod).
+Use the development toolchain specified in [go.mod](go.mod). Run the following commands from the repository root.
 
 ```sh
 gofmt -w .
