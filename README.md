@@ -4,7 +4,7 @@
 
 A Go library for asynchronous tasks. Work in progress; no public API yet.
 
-Requires Go 1.25 or later. No external Go module dependencies.
+Requires Go 1.25.0 or later. No external Go module dependencies.
 
 ## Development
 
