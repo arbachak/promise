@@ -20,7 +20,7 @@ go mod tidy -diff
 
 ## Contributing
 
-Keep changes focused and open pull requests into `main`. Describe the change and the checks you ran in the PR. Run the checks above and wait for [CI](https://github.com/arbachak/promise/actions/workflows/ci.yml) to pass before merging.
+Keep changes focused and open pull requests into `main`. Describe the change and the checks you ran in the PR. Run the [local checks](#development) and wait for [CI](https://github.com/arbachak/promise/actions/workflows/ci.yml) to pass before merging.
 
 ## License
 
